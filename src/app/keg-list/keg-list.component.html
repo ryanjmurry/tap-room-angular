@@ -1,0 +1,7 @@
+<div *ngFor="let keg of kegList">
+  <h2>{{ keg.beerName }}</h2>
+  <h3>{{ keg.brewery }}</h3>
+  <h4>price: {{ keg.price }} | abv: {{ keg.abv }}</h4>
+  <h5>pints remaining: {{ keg.pintsRemaining }}</h5>
+  <button (click)="editButtonClicked(keg)">Edit Keg Details</button>
+</div>
