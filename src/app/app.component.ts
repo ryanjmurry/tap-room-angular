@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Keg } from './models/keg.model';
+import { KEGS } from './models/mock-kegs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Tap Room';
+
+  masterKegList: Keg[] = KEGS;
+  selectedKeg = null;
+
+  editKeg(clickedKeg) {
+    this.selectedKeg = clickedKeg;
+  }
 }
