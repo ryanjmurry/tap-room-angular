@@ -12,8 +12,22 @@ export class AppComponent {
 
   masterKegList: Keg[] = KEGS;
   selectedKeg = null;
+  newKegForm = false;
+
+  showNewKegForm() {
+    this.newKegForm = true;
+  }
 
   editKeg(clickedKeg) {
     this.selectedKeg = clickedKeg;
+  }
+  
+  finishedEditing() {
+    this.selectedKeg = null;
+  }
+
+  addKeg(newKeg: Keg) {
+    this.masterKegList.push(newKeg);
+    this.newKegForm = false;
   }
 }
