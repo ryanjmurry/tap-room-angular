@@ -2,18 +2,3 @@
   text-align: center;
 }
 
-.sort-arrow {
-  width: 10px;
-  padding-bottom: 3px;
-  height: 18px;
-}
-
-.sort-beer-options {
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.sort-by {
-  margin-left: 10px;
-  cursor: pointer;
-}
