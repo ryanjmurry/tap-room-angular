@@ -1,15 +1,6 @@
 <h1 id="title">Tap Room</h1>
-<div id="sort-bar">
-  <button (click)="showNewKegForm()">Add New Keg</button>
-  <div class="sort-beer-options">
-    <span (click)="sortByAbv()" class="sort-by">ABV <fa name="sort"></fa></span> 
-    <span (click)="sortByPrice()" class="sort-by">Price <fa name="sort"></fa></span> 
-    <span (click)="sortByBeerName()" class="sort-by">Name <fa name="sort"></fa></span>
-  </div>
-</div>
-
-
-
+<button (click)="showNewKegForm()">Add New Keg</button>
+<app-sort-by (abvSender)="sortByAbv()" (priceSender)="sortByPrice()" (beerNameSender)="sortByBeerName()"></app-sort-by>
 <div class="row">
   <div class="col-8">
     <app-keg-list [kegList]="masterKegList" (editKegSender)="editKeg($event)" (soldPintSender)="sellPint($event)" (soldGrowlerSender)="sellGrowler($event)" (soldLargeGrowlerSender)="sellLargeGrowler($event)"></app-keg-list>
