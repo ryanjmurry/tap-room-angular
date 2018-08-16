@@ -14,6 +14,12 @@ export class KegListComponent {
   @Output() soldGrowlerSender = new EventEmitter();
   @Output() soldLargeGrowlerSender = new EventEmitter();
 
+  filterByType: string = "allKegs";
+
+  onChange(menuOption) {
+    this.filterByType = menuOption;
+  }
+
   editButtonClicked(kegToEdit: Keg) {
     this.editKegSender.emit(kegToEdit);
   }
@@ -31,14 +37,16 @@ export class KegListComponent {
   }
 
   priceColor(keg) {
-    if (keg.price > 5) {
+    if (keg.price > 6) {
       return "expensive";
     }
-    else if (keg.price >= 3 && keg.price <= 5) {
+    else if (keg.price >= 4 && keg.price <= 6) {
       return "moderate";
     }
     else return "cheap";
   }
+
+
 
   constructor() { }
 }
