@@ -10,10 +10,10 @@ export class AddKegComponent {
   @Input() newKegForm: boolean;
   @Output() submittedKeg = new EventEmitter();
 
-  submitForm(beerName: string, brewery: string, price: string, abv: string) {
+  submitForm(beerName: string, brewery: string, style: string, price: string, abv: string) {
     let newPrice = +parseFloat(price).toFixed(2);
     let newAbv = +parseFloat(abv).toFixed(2);
-    let newKeg = new Keg(beerName, brewery, newPrice, newAbv);
+    let newKeg = new Keg(beerName, brewery, style, newPrice, newAbv);
     this.submittedKeg.emit(newKeg);
   }
 
