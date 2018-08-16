@@ -5,9 +5,11 @@
   <input #newBeerName>
   <label>Brewery:</label>
   <input #newBrewery>
-  <label>Alcohol By Volume:</label>
-  <input type="number" step="0.1" #newAbv>
+  <label>Style:</label>
+  <input #newStyle>
   <label>Price:</label>
   <input type="number" step="0.5" #newPrice>
-  <button (click)="submitForm(newBeerName.value, newBrewery.value, newPrice.value, newAbv.value); newBeerName.value=''; newBrewery.value=''; newAbv.value=''; newPrice.value='';">Add New Keg</button>
+  <label>Alcohol By Volume:</label>
+  <input type="number" step="0.1" #newAbv>
+  <button (click)="submitForm(newBeerName.value, newBrewery.value, newStyle.value, newPrice.value, newAbv.value); newBeerName.value=''; newBrewery.value=''; newStyle.value=''; newAbv.value=''; newPrice.value='';">Add New Keg</button>
 </div>
