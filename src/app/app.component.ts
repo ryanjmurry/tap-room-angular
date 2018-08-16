@@ -14,6 +14,10 @@ export class AppComponent {
   selectedKeg = null;
   newKegForm = false;
 
+  sortAbvAsc = false;
+  sortPriceAsc = false;
+  sortNameAsc = false;
+
   showNewKegForm() {
     this.newKegForm = true;
   }
@@ -41,5 +45,38 @@ export class AppComponent {
   
   sellLargeGrowler(keg: Keg) {
     keg.decrementPintByFour();
+  }
+
+  sortByAbv() {
+    if (this.sortAbvAsc === false) {
+      this.sortAbvAsc = true;
+      this.masterKegList.sort(function(a, b){return a.abv - b.abv})
+    }
+    else {
+      this.sortAbvAsc = false;
+      this.masterKegList.sort(function(a, b){return b.abv - a.abv})
+    }
+  }
+
+  sortByPrice() {
+    if (this.sortPriceAsc === false) {
+      this.sortPriceAsc = true;
+      this.masterKegList.sort(function(a, b){return a.price - b.price})
+    }
+    else {
+      this.sortPriceAsc = false;
+      this.masterKegList.sort(function(a, b){return b.price - a.price})
+    }
+  }
+
+  sortByBeerName() {
+    if (this.sortNameAsc === false) {
+      this.sortNameAsc = true;
+      this.masterKegList.sort();
+    }
+    else {
+      this.sortNameAsc = false;
+      this.masterKegList.sort().reverse();
+    }
   }
 }
