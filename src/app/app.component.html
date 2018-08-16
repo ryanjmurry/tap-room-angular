@@ -5,7 +5,7 @@
     <app-sort-by (abvSender)="sortByAbv()" (priceSender)="sortByPrice()" (beerNameSender)="sortByBeerName()" class="sort-by-component"></app-sort-by>
     <app-keg-list [kegList]="masterKegList" (editKegSender)="editKeg($event)" (soldPintSender)="sellPint($event)" (soldGrowlerSender)="sellGrowler($event)" (soldLargeGrowlerSender)="sellLargeGrowler($event)"></app-keg-list>
     <app-edit-keg [selectedKeg]="selectedKeg" (clickedDone)="finishedEditing()"></app-edit-keg>
-    <app-add-keg [newKegForm]="newKegForm" (submittedKeg)="addKeg($event)"></app-add-keg>
+    <app-add-keg [newKegForm]="newKegForm" (submittedKeg)="addKeg($event)" (cancelledAdd)="cancelAdd()"></app-add-keg>
     <div *ngIf="addButton">
       <button (click)="showNewKegForm()" class="btn btn-primary">Add New Keg</button>
     </div>
