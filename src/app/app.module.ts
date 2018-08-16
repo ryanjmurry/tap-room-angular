@@ -9,6 +9,7 @@ import { EditKegComponent } from './edit-keg/edit-keg.component';
 import { AddKegComponent } from './add-keg/add-keg.component';
 import { RunningLowComponent } from './running-low/running-low.component';
 import { RunningLowPipe } from './runninglow.pipe';
+import { KegTypePipe } from './kegtype.pipe';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { RunningLowPipe } from './runninglow.pipe';
     EditKegComponent,
     AddKegComponent,
     RunningLowPipe,
-    RunningLowComponent
+    RunningLowComponent,
+    KegTypePipe
   ],
   imports: [
     BrowserModule,
