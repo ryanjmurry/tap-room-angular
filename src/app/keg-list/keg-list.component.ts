@@ -43,7 +43,9 @@ export class KegListComponent {
     else if (keg.price >= 4 && keg.price <= 6) {
       return "moderate";
     }
-    else return "cheap";
+    else {
+      return "cheap";
+    }
   }
 
 
