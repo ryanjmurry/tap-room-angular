@@ -25,18 +25,23 @@ export class AppComponent {
     this.addButton = false;
   }
 
+  addKeg(newKeg: Keg) {
+    this.masterKegList.push(newKeg);
+    this.newKegForm = false;
+    this.addButton = true;
+  }
+
+  cancelAdd() {
+    this.addButton = true;
+    this.newKegForm = false;
+  }
+
   editKeg(clickedKeg) {
     this.selectedKeg = clickedKeg;
   }
   
   finishedEditing() {
     this.selectedKeg = null;
-  }
-
-  addKeg(newKeg: Keg) {
-    this.masterKegList.push(newKeg);
-    this.newKegForm = false;
-    this.addButton = true;
   }
 
   sellPint(keg: Keg) {
