@@ -1,16 +1,14 @@
 <div *ngIf="selectedKeg">
-  <h2>{{ selectedKeg.beerName }}</h2>
-  <h3>{{ selectedKeg.brewery }}</h3>
-  <h4>price: {{ selectedKeg.price }} | abv: {{ selectedKeg.abv }}</h4>
-  <h5>pints remaining: {{ selectedKeg.pintsRemaining }}</h5>
-
+  <h1>{{ selectedKeg.brewery }} | {{selectedKeg.beerName }} Details</h1>
   <label>Beer Name:</label>
   <input [(ngModel)]="selectedKeg.beerName">
   <label>Brewery:</label>
   <input [(ngModel)]="selectedKeg.brewery">
-  <label>Alcohol By Volume:</label>
-  <input type="number" step="0.1" [(ngModel)]="selectedKeg.abv">
+  <label>Style:</label>
+  <input [(ngModel)]="selectedKeg.style">
   <label>Price:</label>
   <input type="number" step="0.5" [(ngModel)]="selectedKeg.price">
+  <label>Alcohol By Volume:</label>
+  <input type="number" step="0.1" [(ngModel)]="selectedKeg.abv">
   <button (click)="finishedEditing()">Done Editing</button>
 </div>
