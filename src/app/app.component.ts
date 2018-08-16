@@ -50,33 +50,54 @@ export class AppComponent {
   sortByAbv() {
     if (this.sortAbvAsc === false) {
       this.sortAbvAsc = true;
-      this.masterKegList.sort(function(a, b){return a.abv - b.abv})
+      this.masterKegList.sort((a, b) => {return a.abv - b.abv})
     }
     else {
       this.sortAbvAsc = false;
-      this.masterKegList.sort(function(a, b){return b.abv - a.abv})
+      this.masterKegList.sort((a, b) => {return b.abv - a.abv})
     }
   }
 
   sortByPrice() {
     if (this.sortPriceAsc === false) {
       this.sortPriceAsc = true;
-      this.masterKegList.sort(function(a, b){return a.price - b.price})
+      this.masterKegList.sort((a, b) => {return a.price - b.price})
     }
     else {
       this.sortPriceAsc = false;
-      this.masterKegList.sort(function(a, b){return b.price - a.price})
+      this.masterKegList.sort((a, b) => {return b.price - a.price})
     }
   }
 
   sortByBeerName() {
     if (this.sortNameAsc === false) {
       this.sortNameAsc = true;
-      this.masterKegList.sort();
+      this.masterKegList.sort((a, b) => {
+        let nameA = a.beerName.toUpperCase();
+        let nameB = b.beerName.toUpperCase();
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+        return 0;
+      });
     }
     else {
       this.sortNameAsc = false;
-      this.masterKegList.sort().reverse();
+      this.masterKegList.sort((a, b) => {
+        let nameA = a.beerName.toUpperCase();
+        let nameB = b.beerName.toUpperCase();
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+        return 0;
+      });
+      this.masterKegList.reverse();
     }
   }
 }
