@@ -1,8 +1,10 @@
-<div *ngFor="let keg of kegList">
-  <h2>{{ keg.beerName }} | <span id="kegStyle">{{ keg.style }}</span></h2>
-  <h3>{{ keg.brewery }}</h3>
-  <h4><span [class]="priceColor(keg)">price: {{ keg.price }}</span> | <span>abv: {{ keg.abv }}</span></h4>
-  <h5>pints remaining: {{ keg.pintsRemaining }}</h5> 
-  <button (click)="sellPint(keg)" class="btn btn-sm btn-dark">Sell Pint</button> <button (click)="sellGrowler(keg)" class="btn btn-sm btn-dark">Sell Growler</button> <button (click)="sellLargeGrowler(keg)" class="btn btn-sm btn-dark">Sell Large Growler</button>
-  <button (click)="editButtonClicked(keg)" class="btn btn-sm btn-info">Edit</button>
-</div>
+  <ul class="list-group list-group-flush">
+  <li *ngFor="let keg of kegList" class="list-group-item">
+    <h2>{{ keg.beerName }} | <span id="kegStyle">{{ keg.style }}</span></h2>
+    <h3>{{ keg.brewery }}</h3>
+    <h4><span [class]="priceColor(keg)">price: {{ keg.price }}</span> | <span>abv: {{ keg.abv }}</span></h4>
+    <h5>pints remaining: {{ keg.pintsRemaining }}</h5> 
+    <button (click)="sellPint(keg)" class="btn btn-sm btn-dark">Sell Pint</button> <button (click)="sellGrowler(keg)" class="btn btn-sm btn-dark">Sell Growler</button> <button (click)="sellLargeGrowler(keg)" class="btn btn-sm btn-dark">Sell Large Growler</button>
+    <button (click)="editButtonClicked(keg)" class="btn btn-sm btn-info">Edit</button>
+  </li>
+</ul>

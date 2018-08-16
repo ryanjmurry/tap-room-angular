@@ -14,3 +14,7 @@
     color: rgb(0, 133, 0);
 }
 
+.list-group-flush {
+    max-width: 65%;
+}
+
