@@ -1,0 +1,16 @@
+#kegStyle {
+    font-style: italic;
+}
+
+.expensive {
+    color: crimson;
+}
+
+.moderate {
+    color: goldenrod;
+}
+
+.cheap {
+    color: rgb(0, 133, 0);
+}
+
