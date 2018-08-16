@@ -30,4 +30,16 @@ export class AppComponent {
     this.masterKegList.push(newKeg);
     this.newKegForm = false;
   }
+
+  sellPint(keg: Keg) {
+    keg.decrementPintByOne();
+  }
+
+  sellGrowler(keg: Keg) {
+    keg.decrementPintByTwo();
+  }
+  
+  sellLargeGrowler(keg: Keg) {
+    keg.decrementPintByFour();
+  }
 }
