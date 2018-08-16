@@ -1,5 +1,12 @@
 <h1>Kegs Running Low</h1>
 <hr>
+<div *ngFor="let keg of runningLowList | runninglow:'low'">
+  <h2>{{ keg.beerName }}</h2> 
+</div>
+
+<br>
+<h1>Empty Kegs</h1>
+<hr>
 <div *ngFor="let keg of runningLowList | runninglow">
-  <h2>{{ keg.beerName }} | <span id="kegStyle">{{ keg.style }}</span></h2> 
+  <h2>{{ keg.beerName }}</h2> 
 </div>
