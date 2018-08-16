@@ -10,6 +10,7 @@ import { AddKegComponent } from './add-keg/add-keg.component';
 import { RunningLowComponent } from './running-low/running-low.component';
 import { RunningLowPipe } from './runninglow.pipe';
 import { KegTypePipe } from './kegtype.pipe';
+import { SortByComponent } from './sort-by/sort-by.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { KegTypePipe } from './kegtype.pipe';
     AddKegComponent,
     RunningLowPipe,
     RunningLowComponent,
-    KegTypePipe
+    KegTypePipe,
+    SortByComponent
   ],
   imports: [
     BrowserModule,
