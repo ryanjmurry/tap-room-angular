@@ -9,12 +9,17 @@ import { Keg } from '../models/keg.model';
 export class AddKegComponent {
   @Input() newKegForm: boolean;
   @Output() submittedKeg = new EventEmitter();
+  @Output() cancelledAdd = new EventEmitter();
 
   submitForm(beerName: string, brewery: string, style: string, price: string, abv: string) {
     let newPrice = +parseFloat(price).toFixed(2);
     let newAbv = +parseFloat(abv).toFixed(2);
     let newKeg = new Keg(beerName, brewery, style, newPrice, newAbv);
     this.submittedKeg.emit(newKeg);
+  }
+
+  cancelAdd() {
+    this.cancelledAdd.emit();
   }
 
   constructor() { }
