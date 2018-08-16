@@ -1,5 +1,5 @@
 <h1>Tap Room</h1>
 <button (click)="showNewKegForm()">Add New Keg</button>
-<app-keg-list [kegList]="masterKegList" (clickSender)="editKeg($event)"></app-keg-list>
+<app-keg-list [kegList]="masterKegList" (editKegSender)="editKeg($event)" (soldPintSender)="sellPint($event)" (soldGrowlerSender)="sellGrowler($event)" (soldLargeGrowlerSender)="sellLargeGrowler($event)"></app-keg-list>
 <app-edit-keg [selectedKeg]="selectedKeg" (clickedDone)="finishedEditing()"></app-edit-keg>
 <app-add-keg [newKegForm]="newKegForm" (submittedKeg)="addKeg($event)"></app-add-keg>
