@@ -18,8 +18,11 @@ export class AppComponent {
   sortPriceAsc = false;
   sortNameAsc = false;
 
+  addButton = true;
+
   showNewKegForm() {
     this.newKegForm = true;
+    this.addButton = false;
   }
 
   editKeg(clickedKeg) {
@@ -33,6 +36,7 @@ export class AppComponent {
   addKeg(newKeg: Keg) {
     this.masterKegList.push(newKeg);
     this.newKegForm = false;
+    this.addButton = true;
   }
 
   sellPint(keg: Keg) {
